@@ -64,7 +64,7 @@ export const WatherData = ({ onCity, onForecast, onDisplayForecast }) => {
           })
         ) : (
           <ForecastButton onClick={onDisplayForecast}>
-            Previsao do Tempo
+            Previsão do Tempo
           </ForecastButton>
         )}
       </Container>
