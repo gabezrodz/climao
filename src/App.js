@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import API from "./api/api";
 import Header from "./components/header";
 import { WatherData } from "./components/weather";
+import Footer from "./components/footer";
 
 function App() {
   const [forecast, setForecast] = useState([]);
@@ -94,6 +95,7 @@ function App() {
           <h3 style={{ textAlign: "center" }}>Ex: London,UK</h3>
         </div>
       )}
+      <Footer />
     </div>
   );
 }
