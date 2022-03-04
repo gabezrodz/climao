@@ -1,13 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Asap&family=Caveat&family=Open+Sans:wght@300&family=Sansita+Swashed:wght@300&display=swap");
+
 body {
+  background-image: linear-gradient(
+    to right,
+    rgb(90, 183, 245),
+    rgb(5, 110, 136)
+  );
+  color: white;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Asap", sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+a {
+  text-decoration: none;
+  color: white;
 }

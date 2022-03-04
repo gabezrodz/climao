@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
-import "./App.css";
 import API from "./api/api";
+import Header from "./components/header";
 
 function App() {
   const [forecast, setForecast] = useState([]);
@@ -64,8 +64,15 @@ function App() {
     } else {
     }
   }, [lat, lon, city]);
-
-  return <div className="App"></div>;
+  console.log(city);
+  return (
+    <div className="App">
+      <Header
+        onGetData={getWeatherData}
+        onInputValue={(e) => setCityName(e.target.value)}
+      />
+    </div>
+  );
 }
 
 export default App;
