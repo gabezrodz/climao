@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const ForecastButton = styled.button`
   color: white;
   font-size: 28px;
   position: absolute;

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import API from "./api/api";
 import Header from "./components/header";
+import { WatherData } from "./components/weather";
 
 function App() {
   const [forecast, setForecast] = useState([]);
@@ -9,7 +10,7 @@ function App() {
   const [lat, setLat] = useState(null);
   const [lon, setLon] = useState(null);
   const [mainText, setMainText] = useState(
-    "Olá seja bem vindo! Para iniciar, digite o nome de uma CisetCity acima!"
+    "Olá! Para iniciar, digite o nome de uma cidade na barra acima!"
   );
 
   const getWeatherData = (e) => {
@@ -47,11 +48,11 @@ function App() {
           setForecast(
             res.data.daily
               .map((dia) => ({
-                cidade: city.nome,
-                tempMax: dia.temp.max,
-                tempMin: dia.temp.min,
-                tempMed: (dia.temp.max + dia.temp.min) / 2,
-                iconeClima: dia.weather[0].icon,
+                city: city.name,
+                maxTemp: dia.temp.max,
+                minTemp: dia.temp.min,
+                avgTemp: (dia.temp.max + dia.temp.min) / 2,
+                weatherIcon: dia.weather[0].icon,
               }))
               .slice(0, 4)
           )
@@ -64,13 +65,35 @@ function App() {
     } else {
     }
   }, [lat, lon, city]);
-  console.log(city);
+  
+  const displayForecast = (e) => {
+    e.preventDefault();
+    setLon(city.lon);
+    setLat(city.lat);
+  };
+
+
   return (
     <div className="App">
       <Header
         onGetData={getWeatherData}
         onInputValue={(e) => setCityName(e.target.value)}
       />
+      {city !== null ? (
+        <WatherData onCity={city} onForecast={forecast} onDisplayForecast={displayForecast} />
+      ) : (
+        <div style={{ marginTop: "25px", padding: "0px 25px" }}>
+          <h1 style={{ textAlign: "center" }}>{mainText}</h1>
+          <p style={{ textAlign: "center", fontSize: "22px" }}>
+            Para cidades brasileiras, digite apenas o nome da cidade.
+          </p>
+          <p style={{ textAlign: "center", fontSize: "22px" }}>
+            Para cidades extrangeiras, digite o nome nativo  da cidade, seguido da
+            abreviação do país.
+          </p>
+          <h3 style={{ textAlign: "center" }}>Ex: London,UK</h3>
+        </div>
+      )}
     </div>
   );
 }
