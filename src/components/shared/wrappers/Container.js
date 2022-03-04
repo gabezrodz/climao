@@ -14,11 +14,7 @@ export const ContainerHeader = styled.section`
   justify-content: center;
   gap: 18px;
   padding: 10px;
-  background-image: linear-gradient(
-    to right,
-    rgb(25, 4, 212),
-    rgb(11, 21, 109)
-  );
+  background-image: linear-gradient( to right, rgb(57 174 251), rgb(5,110,136) );
   box-shadow: 0px 2px 10px black;
 
   @media (max-width: 580px) {

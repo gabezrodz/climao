@@ -75,7 +75,7 @@ function App() {
 
 
   return (
-    <div className="App">
+    <div >
       <Header
         onGetData={getWeatherData}
         onInputValue={(e) => setCityName(e.target.value)}

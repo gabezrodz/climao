@@ -6,8 +6,8 @@ export const Card = styled.div`
   padding: 5px 15px;
   border-radius: 5px;
   border: solid 2px white;
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(3px);
+  
+  backdrop-filter: blur(10px);
 `;
 
 export const CardForecast = styled.div`
@@ -16,8 +16,8 @@ export const CardForecast = styled.div`
   padding: 5px 15px;
   border-radius: 5px;
   border: solid 2px white;
-  background-color: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(3px);
+
+  backdrop-filter: blur(5px);
 `;
 
 export const DivTemps = styled.div`

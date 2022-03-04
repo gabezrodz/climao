@@ -1,17 +1,46 @@
 @import url("https://fonts.googleapis.com/css2?family=Asap&family=Caveat&family=Open+Sans:wght@300&family=Sansita+Swashed:wght@300&display=swap");
 
 body {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to right,
     rgb(90, 183, 245),
     rgb(5, 110, 136)
-  );
+  ); */
+  background-image: url(http://wallup.net/wp-content/uploads/2017/03/28/381569-sea-long_exposure-sunset-nature-beach.jpg);
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-position-y: 10vh;
+  width: 100%;
   color: white;
   margin: 0;
   font-family: "Asap", sans-serif;
 }
 
+body::before {
+  background: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT4LiPGP3mwiqHoWdl8bjMFz4etRozmv3_yVA&usqp=CAU")
+    cover center no-repeat;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 0;
+}
+
 a {
   text-decoration: none;
   color: white;
+}
+
+
+@media (max-width: 580px) {
+  body {
+   
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+    background-position-y: 10vh;
+   
+  }
 }
