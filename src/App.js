@@ -3,6 +3,7 @@ import API from "./api/api";
 import Header from "./components/header";
 import { WatherData } from "./components/weather";
 import Footer from "./components/footer";
+import { MainText } from "./components/home";
 
 function App() {
   const [forecast, setForecast] = useState([]);
@@ -83,17 +84,7 @@ function App() {
       {city !== null ? (
         <WatherData onCity={city} onForecast={forecast} onDisplayForecast={displayForecast} />
       ) : (
-        <div style={{ marginTop: "25px", padding: "0px 25px" }}>
-          <h1 style={{ textAlign: "center" }}>{mainText}</h1>
-          <p style={{ textAlign: "center", fontSize: "22px" }}>
-            Para cidades brasileiras, digite apenas o nome da cidade.
-          </p>
-          <p style={{ textAlign: "center", fontSize: "22px" }}>
-            Para cidades extrangeiras, digite o nome nativo  da cidade, seguido da
-            abreviação do país.
-          </p>
-          <h3 style={{ textAlign: "center" }}>Ex: London,UK</h3>
-        </div>
+        <MainText onMainText={mainText}/>
       )}
       <Footer />
     </div>
