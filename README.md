@@ -1,6 +1,6 @@
 # Projeto Climão
 
-## Opa, oi oi! Esse é um projeto com fins de estudos em react e styled-components, e o resultado você pode acessar clicando aqui!
+## Opa, oi oi! Esse é um projeto com fins de estudos em react e styled-components, e o resultado você pode acessar o projeto <a target="_blank" href="https://climao-psi.vercel.app/">clicando aqui!</a>!
 
 <img src="src/img/desktop.png" width="550px" alt="image-desktop">
 A aplicação permite consulta em tempo real em uma API de climatologia.
