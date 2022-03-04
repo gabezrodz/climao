@@ -3,8 +3,6 @@ import styled from "styled-components";
 export const ForecastButton = styled.button`
   color: white;
   font-size: 28px;
-  position: absolute;
-
   border: 3px solid white;
   border-radius: 5px;
   background-color: rgba(255, 255, 255, 0.2);
